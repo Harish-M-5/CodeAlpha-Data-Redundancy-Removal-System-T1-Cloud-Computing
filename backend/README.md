@@ -21,7 +21,6 @@ And now, go to <a href="http://127.0.0.1:8000/redoc" class="external-link" targe
 
 * The alternative documentation will also reflect the new query parameter and body:
 
-![ReDoc](https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png)
 
 ### Recap
 
@@ -129,5 +128,6 @@ item: Item
 * Automatic interactive API documentation, including 2 alternative user interfaces:
     * Swagger UI.
     * ReDoc.
+
 
 
