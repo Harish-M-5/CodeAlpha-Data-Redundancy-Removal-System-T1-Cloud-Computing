@@ -1,4 +1,6 @@
-# Task 1: Data Redundancy Removal System
+# Task 1: Data Redundancy Removal System in Cloud Computing Intership 
+
+--- 
 
 ## Internship Overview
 This project is part of my internship to design and implement a **Data Redundancy Removal System** using **FastAPI** and **MongoDB Atlas**, hosted on **Azure Cloud**. The goal is to build a backend system capable of identifying and preventing duplicate or redundant data entries in a cloud database while maintaining database accuracy and efficiency. The project also includes **API testing using Postman**.
@@ -70,89 +72,100 @@ backend/
 ## Installation & Setup
 
 1. **Clone the Repository**
-```bash
-git clone https://github.com/<your-github-username>/data-redundancy-removal.git
+```
+git clone https://github.com/<my-github-my username>/data-redundancy-removal.git
+
 cd data-redundancy-removal/backend
-
-nstall Python Dependencies
-
-pip install -r requirements.txt
+``` 
 
 
-Setup Environment Variables
+- install Python Dependencies
 
-Create a .env file in the backend folder:
-
-MONGO_URL=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/internship_db?retryWrites=true&w=majority
+``` pip install -r requirements.txt ```
 
 
-Run the Server Locally
+2. **Setup Environment Variables**
 
-uvicorn main:app --reload
+- Create a .env file in the backend folder:
 
-
-Test API
-
- http://127.0.0.1:8000/docs
-
-Postman for API testing.
-<img width="1920" height="1080" alt="Screenshot 2026-02-01 182246" src="https://github.com/user-attachments/assets/e2ac7161-c9e2-482d-96f7-3a9fee46572a" />
+``` MONGO_URL=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/internship_db?retryWrites=true&w=majority ```
 
 
-<img width="1920" height="1080" alt="Screenshot 2026-02-01 182608" src="https://github.com/user-attachments/assets/3053009d-4e78-499b-b73f-96e46a803e89" />
+3. **Run the Server Locally**
 
-<img width="1920" height="1080" alt="Screenshot 2026-02-01 182629" src="https://github.com/user-attachments/assets/0c495f3a-7bce-44ea-a8db-21401a326424" />
+``` uvicorn main:app --reload ```
 
 
-Design: Data Redundancy System
+4. **Test API**
 
-The system identifies duplicate or redundant entries using MongoDB unique indexes on email and phone fields.
+ ``` http://127.0.0.1:8000/docs ``` 
 
-Incoming data is checked against existing records before insertion.
+Postman for API testing
 
-False positives are flagged if the data closely resembles existing entries but is not identical.
+---
 
-Validation Mechanism
+## Design: Data Redundancy System
 
-Uses validation.py to implement:
+- The system identifies duplicate or redundant entries using MongoDB unique indexes on email and phone fields.
 
-Exact match checks for email and phone.
+- Incoming data is checked against existing records before insertion.
 
-Similarity checks for false positive detection.
+- False positives are flagged if the data closely resembles existing entries but is not identical.
 
-Ensures only unique and validated entries are appended to the database.
+--- 
 
-Prevent Duplicate Data Insertion
+## Validation Mechanism
 
-MongoDB indexes enforce unique constraints.
+- Uses validation.py to implement:
 
-Any attempt to insert a duplicate email or phone triggers an error and prevents the data from being saved.
+- Exact match checks for email and phone.
 
-Append Only Unique & Verified Entries
+- Similarity checks for false positive detection.
 
-New entries are appended only after validation.
+- Ensures only unique and validated entries are appended to the database.
 
-False positives are logged for review.
+  --- 
 
-Ensures the database contains clean and verified data at all times.
+## Prevent Duplicate Data Insertion
 
-Database Accuracy & Efficiency
+- MongoDB indexes enforce unique constraints.
 
-Using MongoDB Atlas for a cloud-hosted database.
+- Any attempt to insert a duplicate email or phone triggers an error and prevents the data from being saved
 
-Unique indexes improve query performance and maintain data integrity.
 
-Cloud deployment ensures scalable and reliable backend access.
+--- 
 
-MongoDB Atlas
+## Append Only Unique & Verified Entries
 
-Fully managed cloud database service.
+- New entries are appended only after validation.
 
-Provides high availability, auto-scaling, and security.
+- False positives are logged for review.
 
-Allows remote connection from Azure-hosted FastAPI backend.
+- Ensures the database contains clean and verified data at all times
 
-API Testing with Postman
+  ---
+
+## Database Accuracy & Efficiency
+
+- Using MongoDB Atlas for a cloud-hosted database.
+
+- Unique indexes improve query performance and maintain data integrity.
+
+- Cloud deployment ensures scalable and reliable backend access
+
+  --- 
+
+## MongoDB Atlas
+
+- Fully managed cloud database service.
+
+- Provides high availability, auto-scaling, and security.
+
+- Allows remote connection from Azure-hosted FastAPI backend
+
+--- 
+
+## API Testing with Postman
 
 Add User: POST /add-user
 
@@ -171,71 +184,87 @@ status: unique → Successfully added.
 
 status: duplicate → Email/phone already exists.
 
-status: false_positive → Similar data exists, manual review recommended.
+status: false_positive → Similar data exists, manual review recommended
 
-Azure Deployment
+## API Testing Screenshot 
+<img width="1920" height="1080" alt="Screenshot 2026-02-01 182246" src="https://github.com/user-attachments/assets/e2ac7161-c9e2-482d-96f7-3a9fee46572a" />
 
-Backend deployed as FastAPI app on Azure App Service.
 
-Environment variables set in Azure for MongoDB Atlas connection.
+<img width="1920" height="1080" alt="Screenshot 2026-02-01 182608" src="https://github.com/user-attachments/assets/3053009d-4e78-499b-b73f-96e46a803e89" />
 
-Public URL allows remote API testing and integration.
+<img width="1920" height="1080" alt="Screenshot 2026-02-01 182629" src="https://github.com/user-attachments/assets/0c495f3a-7bce-44ea-a8db-21401a326424" />
 
-Fully cloud-ready and scalable for enterprise usage.
 
-How the Project Runs
+---
 
-Start backend server (locally or Azure).
+## Azure Deployment
 
-Send POST requests to /add-user with JSON data.
+- Backend deployed as FastAPI app on Azure App Service.
 
-System validates entries.
+- Environment variables set in Azure for MongoDB Atlas connection.
 
-Unique entries are saved to MongoDB Atlas.
+- Public URL allows remote API testing and integration.
 
-API responses provide status for each operation.
+- Fully cloud-ready and scalable for enterprise usage
 
-## 
+  
+---
 
-Key Concepts Covered
+## How the Project Runs
 
-Cloud backend development with FastAPI.
+- Start backend server 
 
-MongoDB Atlas cloud database integration.
+- Send POST requests to /add-user with JSON data.
 
-Data redundancy and duplicate prevention.
+- System validates entries.
 
-API testing using Postman & Swagger.
+- Unique entries are saved to MongoDB Atlas.
 
-Azure deployment and environment configuration.
+- API responses provide status for each operation
 
-Configuration
+  ---
 
-.env file for sensitive credentials.
+## Key Concepts Covered
 
-MongoDB Atlas cluster setup.
+- Cloud backend development with FastAPI.
 
-Azure App Service environment variables.
+- MongoDB Atlas cloud database integration.
 
-Python dependencies managed via requirements.txt.
+- Data redundancy and duplicate prevention.
 
-Internship Documentation
+- API testing using Postman & Swagger.
 
-Designed system architecture for cloud.
+- Azure deployment and environment configuration
 
-Implemented backend APIs and validation logic.
+  ---
 
-Tested using Postman and Swagger UI.
+## Configuration
 
-Deployed backend on Azure cloud with MongoDB Atlas.
+- .env file for sensitive credentials.
 
-Acknowledgment
+- MongoDB Atlas cluster setup.
+
+- Azure App Service environment variables.
+
+- Python dependencies managed via requirements.txt.
+
+- Internship Documentation
+
+- Designed system architecture for cloud.
+
+- Implemented backend APIs and validation logic.
+
+- Tested using Postman and Swagger UI.
+
+- Deployed backend on Azure cloud with MongoDB Atlas.
+
+## Acknowledgment
 
 Special thanks to internship mentors and online documentation for guiding cloud database integration, FastAPI setup, and Azure deployment.
 
-Conclusion
+## Conclusion
 
-This project demonstrates a real-world cloud backend system capable of handling data redundancy efficiently. It ensures database accuracy, supports scalable deployment on Azure, and provides a professional-level API ready for production usage.
+- This project demonstrates a real-world cloud backend system capable of handling data redundancy efficiently. - It ensures database accuracy, supports scalable deployment on Azure, and provides a professional-level API ready for production usage.
 
 ---
 
