@@ -8,7 +8,7 @@ This project is part of my internship to design and implement a **Data Redundanc
 ---
 
 ## What is Data Redundancy Removal System in Cloud Computing?
-Data redundancy occurs when the same piece of data exists multiple times in a database. Redundant data increases storage costs, reduces database efficiency, and can lead to errors in processing.  
+Data redundancy occurs when the same piece of data exists multiple times in a database. Redundant data increases storage costs,reduces database efficiency, and can lead to errors in processing.  
 This system ensures that only **unique and verified data** is appended to the cloud database, thereby improving **database accuracy**, **query efficiency**, and overall **data reliability**.
 
 ---
