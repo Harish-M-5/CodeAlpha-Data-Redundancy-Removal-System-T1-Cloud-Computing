@@ -260,7 +260,7 @@ status: false_positive → Similar data exists, manual review recommended
 
 ## Acknowledgment
 
-Special thanks to internship mentors and online documentation for guiding cloud database integration, FastAPI setup, and Azure deployment.
+Special thanks to internship mentors and online documentation for guiding cloud database integration, FastAPI setup and Azure deployment.
 
 ## Conclusion
 
