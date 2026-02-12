@@ -106,11 +106,11 @@ Postman for API testing
 
 ## Design: Data Redundancy System
 
-- The system identifies duplicate or redundant entries using MongoDB unique indexes on email and phone fields.
+- The system identifies duplicate or redundant entries using MongoDB unique indexes on email and phone fields
 
-- Incoming data is checked against existing records before insertion.
+- Incoming data is checked against existing records before insertio
 
-- False positives are flagged if the data closely resembles existing entries but is not identical.
+- False positives are flagged if the data closely resembles existing entries but is not identical
 
 --- 
 
